@@ -141,14 +141,14 @@ class MyfirstAiAgent:
                 break
             
             # Special command to show memory
-            # if user_input.lower() in ['memory', 'remember', 'what did we talk about']:
-            #     print("🧠 Here's what I remember from our conversation:")
-            #     for i, memory in enumerate(self.memory, 1):
-            #         print(f"   {i}. You said: '{memory['user']}'")
-            #         print(f"      I replied: '{memory['agent']}'\n")
-            #     if not self.memory:
-            #         print("   We haven't talked about much yet!")
-            #     continue
+            if user_input.lower() in ['memory', 'remember', 'what did we talk about']:
+                print("🧠 Here's what I remember from our conversation:")
+                for i, memory in enumerate(self.memory, 1):
+                    print(f"   {i}. You said: '{memory['user']}'")
+                    print(f"      I replied: '{memory['agent']}'\n")
+                if not self.memory:
+                    print("   We haven't talked about much yet!")
+                continue
             
             # Make sure they actually typed something
             if not user_input:
@@ -177,7 +177,7 @@ if __name__ == "__main__":
     print("Get yours free at: https://makersuite.google.com/app/apikey")
     
     # You need to put your real API key here
-    API_KEY = "key"
+    API_KEY = "AIzaSyBkLSH32QQdvZCkzi5UR1CahKCOK-rPxhQ"
     
     if API_KEY == "your-api-key-here":
         print("\n⚠️  You need to add your API key first!")
